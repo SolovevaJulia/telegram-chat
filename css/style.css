@@ -2,24 +2,21 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: .5s ease-in-out;
 }
 
-/* @font-face {
-  font-family: Gilroy, serif;
-  src: url("../fonts/Gilroy-Bold.woff") format ("woff");
-  src: url("../fonts/Gilroy-Regular.woff") format ("woff");
-  font-weight: normal;
-  font-style: normal;  width: 1110px;
-  margin: 0 auto;
-} */
-
+body {
+  font-family: "Open Sans", sans-serif;
+}
 
 /* Header */
 .header {
-  padding: 32px 0 0 0;
+  padding-top: 32px;
+  background-color: #f9fbff;
 }
 
 .container {
+  width: 100%;
   max-width: 1110px;
   margin: 0 auto;
 }
@@ -29,37 +26,23 @@
   justify-content: space-between;
 }
 
-.enter {
-  width: 76px;
-  height: 40px;
+.enter,
+.registration {
   background-color: #F1E4FF;
   border-radius: 6px;
   border: none;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   margin-right: 12px;
   color: #685ED6;
   cursor: pointer;
+  padding: 10px 20px;
 }
 
 .registration {
-  width: 138px;
-  height: 40px;
-  border: none;
-  border-radius: 6px;
   background-color: #685ED6;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
   color: #FFFFFF;
-  cursor: pointer;
-}
-
-.header-logo {
-  max-width: 133px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -81,12 +64,25 @@
 }
 
 @media screen and (max-width: 567px) {
+  /* .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
 
+  .header-logo {
+    width: 95px;
+  }
+
+  .enter, .registration {
+    display: none;
+  }
 }
 
 /* Hero */
 .hero {
   padding: 92px 0 285px 0;
+  background-color: #f9fbff;
 }
 
 .hero-wrapper {
@@ -100,8 +96,6 @@
 }
 
 .hero-title {
-  width: 383px;
-  font-style: normal;
   font-weight: 800;
   font-size: 42px;
   line-height: 60px;
@@ -110,25 +104,20 @@
 }
 
 .hero-about {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 34px;
   color: #1D2530;
   margin-bottom: 32px;
 }
 
 .hero-button {
-  width: 168px;
-  height: 48px;
   background-color: #685ED6;
   border: none;
   border-radius: 6px;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
-  line-height: 24px;
   color: #FFFFFF;
+  padding: 12px 32px;
 }
 
 .hero-img {
@@ -139,6 +128,7 @@
 
 .violet-text {
   color: #685ED6;
+  font-weight: 600;
 }
 
 .black-text {
@@ -185,12 +175,25 @@
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 567px) {
-  
+  .hero-img {
+    position: relative;
+    width: 330px;
+    height: 266px;
+  }
+
+  .hero-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .hero-button {
+    margin-bottom: 48px;
+  }
 }
 
 /* Benefits */
 .benefits {
   padding: 69px 0 82px 0;
+  background-color: #f9fbff;
 }
 
 .benefits-wrapper {
@@ -286,6 +289,21 @@
   }
 }
 
+@media screen and (max-width: 567px) {
+  .benefits-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .benefits-list {
+    margin-bottom: 24px;
+  }
+
+  .img-telephone {
+    width: 300px;
+    height: 487px;
+  }
+}
+
 /* Price */
 .price {
   padding: 100px 0;
@@ -296,7 +314,7 @@
   text-align: center;
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
+  font-size: 44px;
   line-height: 64px;
   color: #1D2530;
   margin-bottom: 16px;
@@ -304,8 +322,7 @@
 
 .price-about {
   text-align: center;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: #1D2530;
@@ -329,20 +346,18 @@
 }
 
 .card-title {
-  margin-top: 0;
-  font-style: normal;
   font-weight: 800;
   font-size: 24px;
   line-height: 48px;
   color: #685ED6;
   background: rgba(104, 94, 214, 0.05);
   margin-bottom: 46px;
-  width: 350px;
+  width: 100%;
 }
 
 .card-about {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 28px;
   line-height: 40px;
   color: #1D2530;
@@ -359,8 +374,6 @@
 }
 
 .card-button {
-  width: 287px;
-  height: 48px;
   background-color: #685ED6;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
   border-radius: 6px;
@@ -370,6 +383,7 @@
   line-height: 24px;
   color: #FFFFFF;
   margin-bottom: 50px;
+  padding: 12px 66px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -425,7 +439,44 @@
   }
 }
 
-@media screen and (max-width: 567px) {}
+@media screen and (max-width: 567px) {
+  .tariffs {
+    flex-direction: column;
+  }
+
+  .tariff-card {
+    width: 330px;
+    margin-bottom: 40px;
+  }
+
+  .card-title {
+    width: 330px;
+  }
+
+  .card-title {
+    margin-bottom: 40px;
+    padding: 7px 103px;
+  }
+
+  .card-about {
+    margin-bottom: 32px;
+  }
+
+  .card-price {
+    margin-bottom: 46px;
+  }
+
+  .card-button {
+    margin-bottom: 50px;
+    width: 270px;
+  }
+
+  .price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 /* Steps */
 .steps {
@@ -454,7 +505,7 @@
 .steps-title {
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
+  font-size: 44px;
   line-height: 64px;
   color: #1D2530;
   text-align: center;
@@ -475,6 +526,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 222px;
 }
 
 .steps-item:nth-child(2) {
@@ -546,23 +598,32 @@
   }
 }
 
-@media screen and (max-width: 567px) {}
+@media screen and (max-width: 567px) {
+  .steps-details {
+    flex-direction: column;
+  }
+
+  .steps-img {
+    margin-bottom: 40px;
+  }
+}
 
 
 /* Reviews */
 .reviews {
   padding: 0 0 90px 0;
   position: relative;
+  background-color: #f9fbff;
 }
 
 .reviews-heading {
   text-align: center;
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
+  font-size: 44px;
   line-height: 64px;
   color: #1D2530;
-  margin: 17px 0 48px 0;
+  margin: 0 0 48px 0;
 }
 
 .reviews-slider-wrapper {
@@ -592,7 +653,7 @@
 
 .review-title {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   line-height: 28px;
   color: #18191F;
@@ -627,7 +688,7 @@
 
 .client-name {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
   line-height: 28px;
   color: #1D2530;
@@ -693,7 +754,11 @@
   }
 }
 
-@media screen and (max-width: 567px) {}
+@media screen and (max-width: 567px) {
+  .review-text {
+    width: 327px;
+  }
+}
 
 /* Offer */
 .offer {
@@ -797,7 +862,34 @@
   }
 }
 
-@media screen and (max-width: 567px) {}
+@media screen and (max-width: 567px) {
+  .offer-wrapper {
+    width: 329px;
+    flex-direction: column;
+    background-image: url("/img/bg-567.jpg");
+  }
+
+  .offer-form {
+    width: 271px;
+  }
+
+  .offer-input {
+    width: 151px;
+  }
+
+  .offer-button {
+    width: 120px;
+  }
+
+  .offer-text {
+    width: 280px;
+  }
+
+  .offer-img {
+    width: 269px;
+    height: 239px;
+  }
+}
 
 /* Footer */
 .footer {
@@ -825,7 +917,7 @@
 
 .footer-title {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 30px;
   color: #F4F5F7;
@@ -887,7 +979,15 @@
   }
 }
 
-@media screen and (max-width: 567px) {}
+@media screen and (max-width: 567px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-right: 33px;
+  }
+}
 
 /* Modal */
 .modal-overlay {
