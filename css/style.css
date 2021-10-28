@@ -826,6 +826,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .reviews {
+    padding: 0 0 160px 0;
+  }
+
   .review-text {
     width: 100%;
   }
@@ -837,6 +841,14 @@ body {
   .review-content {
     line-height: 22px;
     margin: 0 32px 32px 32px;
+  }
+
+  .reviews-slider-prev {
+    left: 30px;
+  }
+
+  .reviews-slider-next {
+    right: 30px;
   }
 }
 
