@@ -1236,7 +1236,6 @@ body {
 @media screen and (max-width: 567px) {
   .modal-wrapper {
     padding: 50px 30px;
-    top: 30%;
   }
 
   .modal-button {

@@ -71,10 +71,12 @@ const buttonBurgerAuf = document.querySelector('.menu-burger-enter'),
       
 buttonBurgerAuf.addEventListener('click', function() {
   modal.classList.add('show');
+  menu.classList.remove('open');
 });
 
 buttonBurgerReg.addEventListener('click', function() {
   modalReg.classList.add('show');
+  menu.classList.remove('open');
 });
 
 
