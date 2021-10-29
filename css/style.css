@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: .5s ease-in-out;
+  /* transition: .5s ease-in-out; */
 }
 
 body {
@@ -45,6 +45,26 @@ body {
   color: #FFFFFF;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background-color: #f9fbff;
+  cursor: pointer;
+  width: 30px;
+  height: 16px;
+  visibility: hidden;
+  position: absolute;
+}
+
+.menu-line {
+  width: 30px;
+  height: 2px;
+  background-color: #685ED6;
+  }
+
 @media screen and (max-width: 1200px) {
   .container {
     padding: 0 40px;
@@ -69,18 +89,18 @@ body {
 }
 
 @media screen and (max-width: 567px) {
-  /* .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-
+  
   .header-logo {
     width: 95px;
   }
 
   .enter, .registration {
     display: none;
+  }
+
+  .menu {
+    visibility: visible;
+    position: relative;
   }
 }
 
@@ -1148,7 +1168,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -1206,3 +1225,66 @@ body {
   font-size: 18px;
   line-height: 24px;
 }
+
+/* Menu-burger-open */
+  .menu-burger {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .menu-burger-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(193, 210, 221, 0.5);
+    z-index: 100;
+  }
+
+  .menu-burger-wrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 237px;
+    padding: 76px 30px;
+    z-index: 120;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+
+  .menu-burger-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+  }
+
+  .menu-burger-enter,
+  .menu-burger-registration {
+    background-color: #F1E4FF;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #685ED6;
+    cursor: pointer;
+  }
+
+  .menu-burger-enter {
+    padding: 10px 70px;
+    margin-bottom: 15px;
+  }
+
+  .menu-burger-registration {
+    background-color: #685ED6;
+    color: #FFFFFF;
+    padding: 10px 40px;
+  }
+
+  .open {
+    visibility: visible;
+    opacity: 1;
+  }

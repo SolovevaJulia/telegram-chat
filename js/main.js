@@ -52,3 +52,16 @@ function updateSelection() {
 
   slides[slideIndex].classList.add('showing');
 }
+
+// Menu-burger
+const buttonBurger = document.querySelector('.menu'),
+      menu = document.querySelector('.menu-burger'),
+      menuClose = document.querySelector('.menu-burger-close');
+
+buttonBurger.addEventListener('click', function() {
+  menu.classList.add('open');
+});
+
+menuClose.addEventListener('click', function() {
+  menu.classList.remove('open');
+});
