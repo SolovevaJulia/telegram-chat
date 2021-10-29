@@ -538,12 +538,20 @@ body {
   }
 
   .card-button {
-    padding: 14px 36px;
+    padding: 14px 30px;
   }
 
   .card-about {
     font-size: 24px;
     line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .card-button {
+    width: 90%;
+    padding: 10px 10px;
   }
 }
 
@@ -625,7 +633,7 @@ body {
   .steps-title {
     margin-bottom: 50px;
     font-size: 32px;
-    line-height: 52px;
+    line-height: 44px;
   }
 
   .steps {
@@ -822,12 +830,13 @@ body {
 
   .reviews-heading {
     font-size: 32px;
+    line-height: 44px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .reviews {
-    padding: 0 0 160px 0;
+    padding: 0;
   }
 
   .review-text {
@@ -844,11 +853,17 @@ body {
   }
 
   .reviews-slider-prev {
-    left: 30px;
+    left: 10px;
+    top: 40%;
   }
 
   .reviews-slider-next {
-    right: 30px;
+    right: 10px;
+    top: 40%;
+  }
+
+  .review-slide {
+    width: 70%;
   }
 }
 
@@ -963,13 +978,11 @@ body {
   .offer-form {
     margin-bottom: 40px;
   }
-
-  
 }
 
 @media screen and (max-width: 567px) {
   .offer {
-    margin-top: 130px;
+    margin-top: 0;
   }
 
   .offer-info {
@@ -978,7 +991,18 @@ body {
   }
 
   .offer-input {
-    width: 190px;
+    width: 151px;
+  }
+
+  .offer-form {
+    width: 275px;
+    height: 47px;
+  }
+
+  .offer-text {
+    width: 275px;
+    font-size: 22px;
+    text-align: left;
   }
 }
 
