@@ -65,3 +65,21 @@ buttonBurger.addEventListener('click', function() {
 menuClose.addEventListener('click', function() {
   menu.classList.remove('open');
 });
+
+const buttonBurgerAuf = document.querySelector('.menu-burger-enter'),
+      buttonBurgerReg = document.querySelector('.menu-burger-registration');
+      
+buttonBurgerAuf.addEventListener('click', function() {
+  modal.classList.add('show');
+});
+
+buttonBurgerReg.addEventListener('click', function() {
+  modalReg.classList.add('show');
+});
+
+
+
+
+
+
+      
